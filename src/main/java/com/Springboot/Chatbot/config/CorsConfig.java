@@ -10,10 +10,10 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/**")          // Allow all /api routes
+        registry.addMapping("/**")
                 .allowedOrigins(
-                        "http://localhost:3000",        // React local dev
-                        "https://chatbot-frontend-wine-seven.vercel.app"  // React production URL
+                        "http://localhost:3000",
+                        "https://chatbot-frontend-wine-seven.vercel.app"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
